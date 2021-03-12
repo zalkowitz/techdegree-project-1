@@ -82,13 +82,9 @@ header .profile-image {
 }
 header .profile-image:hover {
   transform: scale(1.2) rotate(365deg);
-  -webkit-transform: scale(1.2) rotate(365deg);
-  -moz-transform: scale(1.2) rotate(365deg);
-  -ms-transform: scale(1.2) rotate(365deg);
-  -o-transform: scale(1.2) rotate(365deg);
 }
 .tag {
-  background-color:none;
+  background-color:transparent;
   color: white;
   padding: 0;
   border-radius: 0;
@@ -106,7 +102,7 @@ header .profile-image:hover {
   color:rgba(255,255,255, 0.9)
 } 
 .location {
-  background-color: none;
+  background-color:transparent;
   color: white;
   font-style:italic;
   letter-spacing:3px;
