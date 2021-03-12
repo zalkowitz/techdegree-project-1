@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Hind', sans-serif;
   color: #222;
   background: #f7f5f0;
 }
@@ -18,7 +18,7 @@ a {
   color: #999;
 }
 a:hover {
-  color: #6633ff;
+  color: #F0C419;
 }
 
 /* Section Styles */
@@ -29,12 +29,13 @@ a:hover {
   min-height: 30px;
   padding: 10px;
   position: fixed;
-  text-align: center;
+  text-align: left;
+  top:0;
 }
 .nav {
   display: flex;
   justify-content: space-around;
-  font-weight: 700;
+  font-weight: 500;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
@@ -44,12 +45,18 @@ a:hover {
     display: block;
     margin-right: auto;
     color: white;
+    font-size:16px;
+    text-transform:uppercase;
+  letter-spacing:4px;
+  color:rgba(255,255,255, 0.7)
 }
 .nav li {
   padding: 5px 10px 10px 10px;
 }
 .nav a {
   transition: all .5s;
+  letter-spacing:2px;
+  color:rgba(255,255,255, 0.7)
 }
 .nav a:hover {
   color: white
@@ -57,7 +64,7 @@ a:hover {
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/background.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -70,23 +77,42 @@ header .profile-image {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: none;
   transition: all .5s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) rotate(365deg);
+  -webkit-transform: scale(1.2) rotate(365deg);
+  -moz-transform: scale(1.2) rotate(365deg);
+  -ms-transform: scale(1.2) rotate(365deg);
+  -o-transform: scale(1.2) rotate(365deg);
 }
 .tag {
-  background-color: #efefef;
-  color: black;
-  padding: 10px;
-  border-radius: 5px;
+  background-color:none;
+  color: white;
+  padding: 0;
+  border-radius: 0;
   display: table;
   margin: 10px auto;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+.name {
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:18px;
+  color:rgba(255,255,255, 0.9)
 } 
 .location {
-  background-color: #222;
-  color: yellow;
+  background-color: none;
+  color: white;
+  font-style:italic;
+  letter-spacing:3px;
+}
+h2 {
+  color:#231F20;
 }
 .card {
   margin: 30px;
@@ -99,7 +125,11 @@ header .profile-image:hover {
   transition: all .5s;
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: #999;
+}
+
+.card-1:hover {
+  border-color: #999;
 }
 
 ul.skills {
@@ -110,14 +140,14 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: #F0C419;
   color: white;
   padding: 5px 10px;
   margin: 2px;
 }
 
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: #231F20;
 }
 
 footer {
@@ -166,6 +196,21 @@ a.social:hover {
 .clearfix {
   clear: both;
 }
+.main {
+  padding-top: 80px;
+  margin:0 auto;
+}
+
+.card-1 {
+  margin: 30px;
+  padding: 20px 40px 40px;
+  max-width: 500px;
+  text-align: left;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+}
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
@@ -178,9 +223,14 @@ a.social:hover {
       justify-content: space-around;
       margin: 0 auto;
   }
-
+  .main {
+    display:flex;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
   header {
-    min-height: 470px;
+    /*min-height: 470px;*/
+    height:380px;
   }
 
   .nav {
@@ -193,6 +243,7 @@ a.social:hover {
     padding-top: 20px;
   }
 
+  
   main p {
     line-height: 1.6em;
   }
